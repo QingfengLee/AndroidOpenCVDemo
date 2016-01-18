@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Utils.bitmapToMat(mBitmap, rgbMat);
         //将彩色图像转换为灰度图像
         Mat grayMat = new Mat();
-        Imgproc.cvtColor(rgbMat,grayMat,Imgproc.COLOR_RGB2GRAY);
+        Imgproc.cvtColor(rgbMat,grayMat,Imgproc.COLOR_BGR2GRAY);
         //将Mat转换为bitmap并设置
         Bitmap grayBmp = Bitmap.createBitmap(grayMat.width(),grayMat.height(), Bitmap.Config.RGB_565);
         Utils.matToBitmap(grayMat,grayBmp);
